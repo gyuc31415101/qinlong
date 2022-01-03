@@ -3,12 +3,12 @@ services:
   web:
     image: whyour/qinglong:latest
     volumes:
-      - ./data/config:/ql/config
-      - ./data/log:/ql/log
-      - ./data/db:/ql/db
-      - ./data/scripts:/ql/scripts
-      - ./data/repo:/ql/repo
-      - ./data/raw:/ql/raw
+      - /ql/config
+      - /ql/log
+      - /ql/db
+      - /ql/scripts
+      - /ql/repo
+      - /ql/raw
     ports:
       - "5700:5700"
     restart: unless-stopped
